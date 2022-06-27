@@ -152,7 +152,7 @@ class _CalendarState extends State<Calendar> {
           var monthFormat =
               DateFormat('MMMM yyyy', widget.locale).format(_selectedDate);
           displayMonth =
-              '${monthFormat[0].toUpperCase()}${monthFormat.substring(1)}';
+              '${monthFormat[1].toUpperCase()}${monthFormat.substring(0)}';
         }));
     _selectedEvents = widget.events?[DateTime(
             _selectedDate.year, _selectedDate.month, _selectedDate.day)] ??
