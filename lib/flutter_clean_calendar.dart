@@ -1,12 +1,13 @@
 library flutter_clean_calendar;
 
 import 'package:flutter/material.dart';
-import './simple_gesture_detector.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:intl/intl.dart';
+
 import './calendar_tile.dart';
 import './clean_calendar_event.dart';
 import './date_utils.dart';
-import 'package:intl/intl.dart';
-import 'package:intl/date_symbol_data_local.dart';
+import './simple_gesture_detector.dart';
 
 // Export NeatCleanCalendarEvent for using it in the application
 export './clean_calendar_event.dart';
@@ -152,7 +153,7 @@ class _CalendarState extends State<Calendar> {
           var monthFormat =
               DateFormat('MMMM yyyy', widget.locale).format(_selectedDate);
           displayMonth =
-              '${monthFormat[1].toUpperCase()}${monthFormat.substring(0)}';
+              '${monthFormat[0].toUpperCase()}${monthFormat.substring(1)}';
         }));
     _selectedEvents = widget.events?[DateTime(
             _selectedDate.year, _selectedDate.month, _selectedDate.day)] ??

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_calendar/flutter_clean_calendar.dart';
-import 'package:flutter_clean_calendar/clean_calendar_event.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,7 +30,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
           endTime: DateTime(DateTime.now().year, DateTime.now().month,
               DateTime.now().day, 12, 0),
           description: 'A special event',
-          color: Colors.blue[700]),
+          color: Colors.blue),
     ],
     DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 2):
         [
